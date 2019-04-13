@@ -12,8 +12,8 @@
   jinrishici.load(function(result)
   {
   var poem=document.getElementById("poem"),poet=document.getElementById("poet");
-  poem.innerText=jinrishici.data.content;
-  poet.innerText="--"+jinrishici.data.origin.dynasty+"·"+jinrishici.data.origin.author+" 《"+jinrishici.data.origin.title+"》";
+  poem.innerText=result.data.content;
+  poet.innerText="--"+result.data.origin.dynasty+"·"+result.data.origin.author+" 《"+result.data.origin.title+"》";
   console.log(result)
   });
 </script>
