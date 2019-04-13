@@ -2,17 +2,18 @@
 
 <html>
 
-<span id="poem">少女祈祷中....</span>
+<span id="main">少女祈祷中....</span>
 <br>
-<span id="poet">Now Loading....</span>
+<a id="link" href="https://www.gushiwen.org/"><span id="info">Now Loading....</span></a>
 
 <script src="https://sdk.jinrishici.com/v2/browser/jinrishici.js" charset="utf-8"></script>
 <script type="text/javascript">
   jinrishici.load(function(result)
   {
-  var poem=document.getElementById("poem"),poet=document.getElementById("poet");
-  poem.innerText=result.data.content;
-  poet.innerText="-- "+result.data.origin.dynasty+"·"+result.data.origin.author+" 《"+result.data.origin.title+"》";
+  var text1=document.getElementById("main"),text2=document.getElementById("info"),link=document.getElementById("link");
+  text1.innerText=result.data.content;
+  text2.innerText="-- "+result.data.origin.dynasty+"·"+result.data.origin.author+" 《"+result.data.origin.title+"》";
+  link.href="https://so.gushiwen.org/search.aspx?value="+result.data.origin.title+"+"+result.data.origin.author;
   console.log(result)
   });
 </script>
