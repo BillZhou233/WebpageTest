@@ -9,11 +9,11 @@
 
 <script src="https://sdk.jinrishici.com/v2/browser/jinrishici.js" charset="utf-8"></script>
 <script type="text/javascript">
-  jinrishici.load(function(result) 
+  jinrishici.load(function(result)
   {
   var poem=document.getElementById("poem"),poet=document.getElementById("poet");
-  poem.innerText=data.content;
-  poet.innerText="--"+data.origin.dynasty+"·"+data.origin.author+" 《"+data.origin.title+"》";
+  poem.innerText=jinrishici.data.content;
+  poet.innerText="--"+jinrishici.data.origin.dynasty+"·"+jinrishici.data.origin.author+" 《"+jinrishici.data.origin.title+"》";
   console.log(result)
   });
 </script>
