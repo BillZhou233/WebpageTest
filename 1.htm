@@ -4,16 +4,16 @@
 
 <span id="poem">少女祈祷中....</span>
 
+
 <span id="poet">Now Loading....</span>
 
 <script src="https://sdk.jinrishici.com/v2/browser/jinrishici.js" charset="utf-8"></script>
-
-<script type="text/javascript">
+<script type="javascript">
   jinrishici.load(function(result) 
   {
-  var nnn=document.getElementById("poem"),mmm=document.getElementById("poet");
-  nnn.innerText=data.content;
-  mmm.innerText="--"+data.origin.dynasty+"·"data.origin.author+" 《"+data.origin.title+"》";
+  var poem=document.getElementById("poem"),poet=document.getElementById("poet");
+  poem.innerText=data.content;
+  poet.innerText="--"+data.origin.dynasty+"·"+data.origin.author+" 《"+data.origin.title+"》";
   console.log(result)
   });
 </script>
