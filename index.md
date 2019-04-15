@@ -4,4 +4,4 @@
   - C++
   - Windows CMD
   - Visual Basic 6.0 经典版
-  - Free Pascal
+  - Free Pascal （废弃）
