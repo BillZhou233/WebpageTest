@@ -1,7 +1,6 @@
 ## Main Page
 
 ### Links
-- [文章索引](https://billzhou233.github.io/#/)
 - [应用索引](https://billzhou233.github.io/0/)
 - [WordPress Page](https://bz233.wordpress.com/)
 
