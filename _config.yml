@@ -1,5 +1,7 @@
 encoding: UTF-8
-name: BillZhou233's Site
+timezone: Asia/Shanghai
+name: BillZhou233's GitHub Page
+title: BillZhou233 的 GitHub Page
 description: 欢迎您的到来
 exclude: [README.md, .gitignore, .gitattributes]
 
