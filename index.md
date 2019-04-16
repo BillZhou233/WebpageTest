@@ -1,3 +1,7 @@
+---
+title: Main Page
+---
+
 ## Main Page
 
 ### Links
