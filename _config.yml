@@ -1,4 +1,9 @@
 encoding: UTF-8
+name: BillZhou233's Site
+description: 欢迎您的到来
+exclude: [README.md, .gitignore, .gitattributes]
+
 theme: jekyll-theme-cayman
+
 plugins:
   - jekyll-redirect-from
