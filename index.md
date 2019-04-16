@@ -1,5 +1,5 @@
 ---
-title: Main Page
+title: 首页
 ---
 
 ## Main Page
