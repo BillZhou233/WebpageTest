@@ -1,5 +1,5 @@
 ---
-title: 应用索引
+title: Application
 ---
 
 ## HTML Application Index
