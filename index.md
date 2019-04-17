@@ -21,8 +21,8 @@ title: Main Page
   - Android M With Xposed
   - iOS 12
 - 与本人交♂流
-  - Email: billzhou233@yeah.net
-  - Luogu: BillZhou233
-  - Bilibili: 25333286
-  - 163 Music: BillZhou233
-  - Majsoul: BZ233
+  - Email / 电邮: billzhou233@yeah.net
+  - Luogu / 一起WA题: BillZhou233
+  - Bilibili / 看番: 25333286
+  - 163 Music / 来听歌: BillZhou233
+  - Majsoul / 愉快地断幺: BZ233
