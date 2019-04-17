@@ -23,5 +23,6 @@ title: Main Page
 - 与本人交♂流
   - Email: billzhou233@yeah.net
   - Luogu: BillZhou233
-  - 163 Music: BillZhou233
   - Bilibili: 25333286
+  - 163 Music: BillZhou233
+  - Majsoul: BZ233
