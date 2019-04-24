@@ -21,12 +21,12 @@ var InitScore = 25000;
 var player = [new Player('Aさん', InitScore), new Player('Bさん', InitScore), new Player('Cさん', InitScore), new Player('Dさん', InitScore)];
 var game_state = new Array();
 
-var rong_flag = [false, false, false, false]; //胡牌
+var rong_flag = [false, false, false, false]; //和牌
 var dianpao_flag = [false, false, false, false]; //点炮
 var lichi_flag = [false, false, false, false]; //立直
 
 var mainView = 0; //点差模式下主视角
-var rong_list = [-1]; //[点炮者,[胡牌者1,点数],[胡牌者2,点数]]
+var rong_list = [-1]; //[点炮者,[和牌者1,点数],[和牌者2,点数]]
 var game_area_lock = false;
 
 var IsClosePanel = false;
@@ -257,7 +257,7 @@ function dianpao_click(idx) {
     } else {
         $("#player" + idx + "_dianpao").text("取消");
         $("#player" + idx + "_dianpao").addClass('t_btn_click');
-        if (rong_flag[idx] == true) { //不可能同时胡牌和点炮
+        if (rong_flag[idx] == true) { //不可能同时和牌和点炮
             $("#player" + idx + "_rong").text("自摸");
             $("#player" + idx + "_rong").removeClass('t_btn_click');
             rong_flag[idx] = false;
@@ -273,7 +273,7 @@ function dianpao_click(idx) {
     var has_dianpao = dianpao_flag[0] || dianpao_flag[1] || dianpao_flag[2] || dianpao_flag[3];
     for (var i = 0; i < 4; i++) {
         if (rong_flag[idx] == false) {
-            $("#player" + i + "_rong").text(has_dianpao ? "胡牌" : "自摸");
+            $("#player" + i + "_rong").text(has_dianpao ? "和牌" : "自摸");
         }
     }
 }
@@ -373,13 +373,13 @@ function ShowErrorStr(base_score) {
     if (base_score == -2)
         $('#fanfu_ok')[0].value = '符数未设置';
     if (base_score == -3)
-        $('#fanfu_ok')[0].value = '一番25符是不可能的！！';
+        $('#fanfu_ok')[0].value = '1番25符不存在的！！';
     if (base_score == -4)
         $('#fanfu_ok')[0].value = '自摸人数太多了！！';
-    if (base_score == -5)
-        $('#fanfu_ok')[0].value = '一炮三响是流局！！';
+    //if (base_score == -5)
+        //$('#fanfu_ok')[0].value = '一炮三响默认流局';
     if (base_score == -6)
-        $('#fanfu_ok')[0].value = '四人点炮你逗我？！！';
+        $('#fanfu_ok')[0].value = '和牌人数四个人？！';
     if (base_score == -7)
         $('#fanfu_ok')[0].value = '游戏已经开始了';
     setTimeout("Set_OKbtn_Text()", 1000);
@@ -394,12 +394,12 @@ function CalScore_OK() {
     var rong_num = rong_flag[0] + rong_flag[1] + rong_flag[2] + rong_flag[3];
     var is_zimo = !dianpao_flag[0] && !dianpao_flag[1] && !dianpao_flag[2] && !dianpao_flag[3];
 
-    if (!is_zimo && rong_num == 3) { //一炮三响
-        ShowErrorStr(-5);
-        liuju_cal([0, 0, 0, 0], !rong_flag[game.jushu - 1]);
-        return;
-    }
-    if (!is_zimo && rong_num == 4) { //胡牌人数四个人，你特么在逗我？！
+    //if (!is_zimo && rong_num == 3) { //一炮三响
+        //ShowErrorStr(-5);
+        //liuju_cal([0, 0, 0, 0], !rong_flag[game.jushu - 1]);
+        //return;
+    //}
+    if (!is_zimo && rong_num == 4) { //和牌人数四个人，你特么在逗我？！
         ShowErrorStr(-6);
         return;
     }
@@ -443,14 +443,14 @@ function CalScore_OK() {
         for (var i = 0; i < 4; i++) {
             if (rong_flag[i]) {
                 rong_flag[i] = false;
-                $("#player" + i + "_rong").text("胡牌");
+                $("#player" + i + "_rong").text("和牌");
                 $("#player" + i + "_rong").removeClass('t_btn_click');
                 rong_list.push([i, base_score]);
                 break;
             }
         }
         Set_OKbtn_Text();
-        if (rong_flag[0] + rong_flag[1] + rong_flag[2] + rong_flag[3] == 0) { //处理完全部胡牌了
+        if (rong_flag[0] + rong_flag[1] + rong_flag[2] + rong_flag[3] == 0) { //处理完全部和牌了
             deal_dianpao();
         } else {
             game_area_lock = true; //一炮双响,锁定面板，不允许操作
@@ -577,14 +577,14 @@ function change_game_mode() {
     }
     if(game_mode == 1)
     {
-        $('#change_game_mode span').html('速东模式');
+        $('#change_game_mode span').html('东风模式');
         game_mode = 2;
-        InitScore = 20000;
+        InitScore = 25000;
         end_game();
     }
     else
     {
-        $('#change_game_mode span').html('半庄模式');
+        $('#change_game_mode span').html('南风模式');
         game_mode = 1;
         InitScore = 25000;
         end_game();
