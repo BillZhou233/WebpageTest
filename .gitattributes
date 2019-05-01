@@ -5,5 +5,9 @@
 *.html linguist-language=HTML
 *.xml linguist-language=HTML
 *.css linguist-language=HTML
+*.svg linguist-language=HTML
+*.eot linguist-language=HTML
+*.ttf linguist-language=HTML
+*.woff linguist-language=HTML
 *.sql linguist-language=HTML
 *.uml linguist-language=HTML
