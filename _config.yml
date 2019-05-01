@@ -76,4 +76,4 @@ RSS: false
 permalink: /:title.html
 
 # Plugins
-plugins: [jekyll-paginate, jekyll-redirect-from]
+plugins: [jekyll-paginate]
