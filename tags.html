@@ -1,12 +1,12 @@
 ---
-title: Label Index
+title: Tags
 layout: default
 ---
 
 {% include header.html %}
 
 <div class="g-banner tags-banner {{ site.postPatterns | prepend: 'post-pattern-' }} {{ site.theme-color | prepend: 'bgcolor-' }}" data-theme="{{ site.theme-color }}">
-    <h2>标签索引</h2>
+    <h2>TAGS</h2>
 </div>
 
 <main class="tags-content">
@@ -22,7 +22,7 @@ layout: default
         
         {% for tag in site.tags %}
         <li>
-            <span class="tag-name" id="{{ tag[0] }}">「{{ tag[0] }}」</span>
+            <span class="tag-name" id="{{ tag[0] }}"> {{ tag[0] }} </span>
             {% for post in tag[1] %}
             <a class="tag-post" href="{{ post.url }}" title="{{ post.title }}">{{ post.title }}</a>
             {% endfor %}

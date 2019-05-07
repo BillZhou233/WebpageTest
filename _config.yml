@@ -11,9 +11,8 @@ baseurl: ''
 
 # Navigation links
 nav:
-  mainpage: '/'
-  articles: '/1/'
-  applications: '/0/'
+  home: '/'
+  tags: '/tags.html'
 
 # Footer
 footer:
@@ -54,13 +53,13 @@ postPatterns: 'seaOfClouds'
 sns:
 
 # Tags 设置标签
-recommend-tags: false # whether or not display recommend-tags on the sidebar
+recommend-tags: true # whether or not display recommend-tags on the sidebar
 recommend-condition-size: 12 # a tag will be recommended if the size of it is more than this value
 
 # Build settings
-paginate: 15
+paginate: 16
 paginate_path: 'page:num'
-exclude: ['node_modules', 'dev', 'package.json', 'gulpfile.js', '.gitignore', 'README.md']
+exclude: ['node_modules', 'dev', 'package.json', 'gulpfile.js', '.gitignore', 'README.md', 'LICENSE']
 
 # Markdown
 markdown: kramdown
@@ -73,7 +72,7 @@ RSS: false
 
 # Permalink
 # See: https://github.com/kaeyleo/jekyll-theme-H2O/issues/35
-permalink: /:title.html
+permalink: /p/:title.html
 
 # Plugins
 plugins: [jekyll-paginate, jekyll-redirect-from]
