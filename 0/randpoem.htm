@@ -1,0 +1,21 @@
+<!DOCTYPE HTML>
+
+<html>
+
+<span id="main">少女祈祷中....</span>
+<br>
+<a id="link" href="https://www.gushiwen.org/"><span id="info"></span></a>
+
+<script src="https://sdk.jinrishici.com/v2/browser/jinrishici.js" charset="utf-8"></script>
+<script type="text/javascript">
+  jinrishici.load(function(result)
+  {
+  var text1=document.getElementById("main"),text2=document.getElementById("info"),link=document.getElementById("link");
+  text1.innerText=result.data.content;
+  text2.innerText="-- "+result.data.origin.dynasty+"·"+result.data.origin.author+" 《"+result.data.origin.title+"》";
+  link.href="https://so.gushiwen.org/search.aspx?value="+result.data.origin.title+"+"+result.data.origin.author;
+  console.log(result)
+  });
+</script>
+
+</html>
