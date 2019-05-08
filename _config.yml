@@ -13,6 +13,7 @@ baseurl: ''
 nav:
   home: '/'
   tags: '/tags.html'
+  links: '/links.html'
 
 # Footer
 footer:
