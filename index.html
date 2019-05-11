@@ -32,14 +32,14 @@ description: 欢迎您的到来
                     <h3 class="post-subtitle">{{ post.subtitle }}</h3>
                     {% endif %}
                     {% if post.subtitle.size==0 or post.subtitle==nil %}
-                    <p class="post-excerpt">{{ post.excerpt | strip_html | strip_newlines | truncate: 126}}</p>
+                    <p class="post-excerpt">{{ post.excerpt | strip_html | strip_newlines | truncate: 126 }}</p>
                     {% endif %}
                 </section>
                 <footer class="post-meta">
                     <div class="post-tags">
                         {% if post.tags.size > 0 %}
                             {% for tag in post.tags  %}
-                            <a href={{ "/tags.html#" | append: tag | prepend: site.baseurl}} class="post-tag">{{ tag }}</a>
+                            <a href={{ "/tags.html#" | append: tag | prepend: site.baseurl }} class="post-tag">{{ tag }}</a>
                             {% endfor %}
                         {% endif %}
                     </div>
