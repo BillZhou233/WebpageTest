@@ -1,10 +1,9 @@
 # Site settings 配置站点
 encoding: UTF-8
 timezone: Asia/Shanghai
-title: BillZhou233's Github Page
+title: BillZhou233's GitHub Page
 description: Nya~
 keyword: ''
-url: '' # your host
 
 # if you don't need baseurl, you should leave this value blank.
 baseurl: ''
