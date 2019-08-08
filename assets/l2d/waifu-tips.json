@@ -3,7 +3,7 @@
         "console_open_msg": ["哈哈，你打开了控制台，是想要看看我的秘密吗？"],
         "copy_message": ["你都复制了些什么呀，转载要记得向主人要授权哦"],
         "screenshot_message": ["照好了嘛，是不是很可爱呢？"],
-        "hidden_message": ["我们还能再见面的吧…"],
+        "hidden_message": ["还想再见面的话就刷新一下吧"],
         "load_rand_textures": ["我还没有其他衣服呢", "我的新衣服好看嘛"],
         "hour_tips": {
             "t5-7": ["早上好！一日之计在于晨，美好的一天就要开始了"],
