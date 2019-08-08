@@ -5,7 +5,9 @@ try {
         $.ajax({url: "/assets/l2d/live2d.js?v=1.0.5", dataType:"script", cache: true, success: function() {
             /* 可直接修改部分参数 */
             
-            // URL
+            // 行为
+            live2d_settings['canSwitchHitokoto'] = false;  // 显示 一言切换    按钮，可选 true(真), false(假)
+            live2d_settings['showHitokoto'] = false; // 显示一言
             live2d_settings['hitokotoAPI'] = "lwl12.com";  // 一言 API
             live2d_settings['homePageUrl'] = 'https://billzhou233.github.io/';  // 主页地址，可选 'auto'(自动), '{URL 网址}'
             live2d_settings['screenshotCaptureName'] = 'ss_l2d.png';  // 看板娘截图文件名，例如 'live2d.png'
