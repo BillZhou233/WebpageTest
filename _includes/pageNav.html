@@ -5,14 +5,14 @@
     <div class="page-links">
         {% if paginator.previous_page %}
             {% if paginator.previous_page == 1 %}
-            <a href="{{ "/" | relative_url }}" class="page-link" title="Previous Page">&laquo;</a>
+            <a href="{{ "/" | relative_url }}" class="page-link" id="prevpage" title="Previous Page">&laquo;</a>
             {% else %}
-            <a href="/page{{ paginator.previous_page }}/" class="page-link" title="Previous Page">&laquo;</a>
+            <a href="/page{{ paginator.previous_page }}/" class="page-link" id="prevpage" title="Previous Page">&laquo;</a>
             {% endif %}
         {% endif %}
         <div id="page-link-container"></div>
         {% if paginator.next_page %}
-        <a href="/page{{ paginator.next_page }}/" class="page-link">&raquo;</a>
+        <a href="/page{{ paginator.next_page }}/" class="page-link" id="nextpage" title="Next Page">&raquo;</a>
         {% endif %}
     </div>
 </nav>
