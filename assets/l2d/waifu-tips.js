@@ -209,7 +209,7 @@ function loadTipsMessage(result) {
         $(document).on("mouseover", tips.selector, function (){
             var text = getRandText(tips.text);
             text = text.render({text: $(this).text()});
-            text = text.render({title: $(this).attr("title")});
+            text = text.render({title: $(this).prop("title")});
             showMessage(text, 3000);
         });
     });
