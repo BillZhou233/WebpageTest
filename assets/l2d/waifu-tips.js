@@ -208,8 +208,7 @@ function loadTipsMessage(result) {
     $.each(result.mouseover, function (index, tips){
         $(document).on("mouseover", tips.selector, function (){
             var text = getRandText(tips.text);
-            text = text.render({text: $(this).text()});
-            text = text.render({title: $(this).prop("title")});
+            text = text.render({text: $(this).prop("title")});
             showMessage(text, 3000);
         });
     });
