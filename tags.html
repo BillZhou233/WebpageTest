@@ -16,7 +16,7 @@ redirect_from: "/1/"
         <li>
         {% if site.recommend-tags and site.tags.size>0 %}
             {% for tag in site.tags %}
-            <a href="#{{ tag[0] }}" class="tag">{{ tag[0]}}</a>
+            <a href="#{{ tag[0] }}" class="tag" title="{{ tag[0] }}">{{ tag[0] }}</a>
             {% endfor %}
         {% endif %}
         </li>
