@@ -27,15 +27,13 @@
     animation-name: shake;
     animation-timing-function: ease-in-out;
 }
+
 .waifu-tool {
-    display: none;
+    display: block;
     color: #aaa;
     top: 50px;
     right: 10px;
     position: absolute;
-}
-.waifu:hover .waifu-tool {
-    display: block;
 }
 .waifu-tool span {
     display: block;
