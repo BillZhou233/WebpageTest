@@ -253,8 +253,7 @@ function loadTipsMessage(result) {
     
     /* 修改隐藏部分代码 */
     $('.waifu-tool .fui-power').click(function(){
-        $('.waifu-tips').toggle();
-        $('.live2d').toggle();
+        $('#waifu-display').toggle();
     });
     
     window.showWelcomeMessage = function(result) {
