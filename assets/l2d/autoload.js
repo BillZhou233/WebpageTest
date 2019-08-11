@@ -1,6 +1,6 @@
 try {
     $("<link>").attr({href: "/assets/l2d/waifu.css?v=1.4.2", rel: "stylesheet", type: "text/css"}).appendTo('head');
-    $('body').append('<div class="waifu"><div id="waifu-display"><div class="waifu-tips"></div><canvas id="live2d" class="live2d"></canvas></div><div class="waifu-tool"><span class="fui-home"></span> <span class="fui-chat"></span> <span class="fui-eye"></span> <span class="fui-user"></span> <span class="fui-photo"></span> <span class="fui-info-circle"></span> <span class="fui-power"></span></div></div>');
+    $('body').append('<div class="waifu"><div id="waifu-placeholder"></div><div id="waifu-display"><div class="waifu-tips"></div><canvas id="live2d" class="live2d"></canvas></div><div class="waifu-tool"><span class="fui-home"></span> <span class="fui-chat"></span> <span class="fui-eye"></span> <span class="fui-user"></span> <span class="fui-photo"></span> <span class="fui-info-circle"></span> <span class="fui-power"></span></div></div>');
     $.ajax({url: "/assets/l2d/waifu-tips.js?v=1.4.2", dataType:"script", cache: true, success: function() {
         $.ajax({url: "/assets/l2d/live2d.js?v=1.0.5", dataType:"script", cache: true, success: function() {
             /* 可直接修改部分参数 */

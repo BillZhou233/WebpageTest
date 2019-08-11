@@ -132,12 +132,15 @@ function initModel(waifuPath, type) {
     
     $("#live2d").attr("width",live2d_settings.waifuSize[0]);
     $("#live2d").attr("height",live2d_settings.waifuSize[1]);
+    $("#waifu-placeholder").width(live2d_settings.waifuSize[0]);
+    $("#waifu-placeholder").height(live2d_settings.waifuSize[1]);
     $(".waifu-tips").width(live2d_settings.waifuTipsSize[0]);
     $(".waifu-tips").height(live2d_settings.waifuTipsSize[1]);
     $(".waifu-tips").css("top",live2d_settings.waifuToolTop);
     $(".waifu-tips").css("font-size",live2d_settings.waifuFontSize);
     $(".waifu-tool").css("font-size",live2d_settings.waifuToolFont);
     $(".waifu-tool span").css("line-height",live2d_settings.waifuToolLine);
+    $("#waifu-placeholder").hide();
     
     if (live2d_settings.waifuEdgeSide[0] == 'left') $(".waifu").css("left",live2d_settings.waifuEdgeSide[1]+'px');
     else if (live2d_settings.waifuEdgeSide[0] == 'right') $(".waifu").css("right",live2d_settings.waifuEdgeSide[1]+'px');
@@ -254,6 +257,7 @@ function loadTipsMessage(result) {
     /* 修改隐藏部分代码 */
     $('.waifu-tool .fui-power').click(function(){
         $('#waifu-display').toggle();
+        $('#waifu-placeholder').toggle();
     });
     
     window.showWelcomeMessage = function(result) {
