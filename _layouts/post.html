@@ -162,21 +162,13 @@
   <script src="/assets/js/prism.js"></script>
   <script src="/assets/js/index.min.js"></script>
   <!--<script src="/assets/l2d/autoload.js"></script>-->
-  <!--
   <script type="text/javascript">
-  $("script[type='math/tex']").replaceWith(
-    function(){
-      var tex = $(this).text();
-      return "&lt;span class=\"inline-equation\"&gt;" + katex.renderToString(tex) + "&lt;/span&gt;";
-    });
-
   $("script[type='math/tex; mode=display']").replaceWith(
     function(){
       var tex = $(this).text();
-      return katex.renderToString("\\displaystyle "+tex);
+      return katex.renderToString(tex);
     });
   </script>
-  -->
 </body>
 
 </html>
