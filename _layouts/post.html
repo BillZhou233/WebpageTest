@@ -162,6 +162,7 @@
   <script src="/assets/js/prism.js"></script>
   <script src="/assets/js/index.min.js"></script>
   <!--<script src="/assets/l2d/autoload.js"></script>-->
+  <!--
   <script type="text/javascript">
   $("script[type='math/tex']").replaceWith(
     function(){
@@ -172,9 +173,10 @@
   $("script[type='math/tex; mode=display']").replaceWith(
     function(){
       var tex = $(this).text();
-      return "&lt;div class=\"equation\"&gt;" + katex.renderToString("\\displaystyle "+tex) + "&lt;/div&gt;";
+      return katex.renderToString("\\displaystyle "+tex);
     });
   </script>
+  -->
 </body>
 
 </html>
