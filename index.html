@@ -7,6 +7,10 @@ header-img: https://cdn.luogu.com.cn/upload/image_hosting/svp11sjy.png
 
 {% include header.html %}
 
+{% if page.header-img %}
+<img hidden src="{{ page.header-img | prepend: site.baseurl }}">
+{% endif %}
+
 <div
     class="g-banner home-banner {{ site.theme-color | prepend: 'banner-theme-' }}"
     data-theme="{{ site.theme-color }}"
