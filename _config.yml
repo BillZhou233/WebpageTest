@@ -10,7 +10,7 @@ baseurl: ''
 
 # Navigation links
 nav:
-  home: '/default.html'
+  home: '/'
   tags: '/tags.html'
   links: '/links.html'
 
