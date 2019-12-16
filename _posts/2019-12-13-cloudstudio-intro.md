@@ -51,12 +51,10 @@ Cloud Studio 是由某讯云推出的功能强大的在线 IDE。目前其有两
 
 在终端中手动编译一份 C++ 代码，一般使用这个命令
 
-<pre class="command-line language-bash" data-prompt="workspace git:(master) $"><code class="language-bash">g++ [source].cpp -o [program] -lm -Wall
-</code></pre>
+<pre class="command-line language-bash" data-prompt="workspace git:(master) $"><code class="language-bash">g++ [source].cpp -o [program] -lm -Wall</code></pre>
 
 编译成功后应该就可以在文件夹区看到生成的可执行程序了，然后用这个命令来运行
 
-<pre class="command-line language-bash" data-prompt="workspace git:(master) $"><code class="language-bash">./[program]
-</code></pre>
+<pre class="command-line language-bash" data-prompt="workspace git:(master) $"><code class="language-bash">./[program]</code></pre>
 
 至于调试，这货只支持手动 gdb 调试，然鹅笔者不会用手动调试，一般都直接用本地 VSCode 来调。 
