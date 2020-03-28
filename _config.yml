@@ -21,8 +21,8 @@ footer:
 # Author 配置博主信息
 author: 'BillZhou233'
 nickname: 'BZ233'
-bio: '一个 OIer · JS 学习中'
-avatar: '/assets/img/Keikumusume1.png'
+bio: '一个OIer / 音游人'
+avatar: 'https://s2.ax1x.com/2020/02/19/3EGemt.png'
 
 # Search
 search: true
