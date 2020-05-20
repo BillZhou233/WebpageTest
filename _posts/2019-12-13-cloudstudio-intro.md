@@ -1,12 +1,12 @@
 ---
 layout: post
-title: 【持续更新】Cloud Studio - 你从未用过的船新在线 IDE
+title: Cloud Studio - 你现在没法使用的已废设在线 IDE
 date: 2019-12-13
 tags: ['C++', 'JavaScript', '开发']
 categories: main
 ---
 
-旧版 Cloud Studio 是个很适合 JavaScript 的在线 IDE，笔者用了大半年了。
+旧版 Cloud Studio 是个很适合 JavaScript 的在线 IDE，笔者用了大半年了，不过现在没了。
 
 然而这东西的新版有点坑，一天使用时间有限制，而老版本不会...
 
