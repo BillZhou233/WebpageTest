@@ -1,6 +1,8 @@
 // encoding: utf-8
 // 大括号不换行的跟换行的打，变量名首字母大写的跟不大写的打，私有域前面加下划线的跟不加下划线的打
 
+console.log("This is Cytoid Checker Ver200520A\nMade By BillZhou233");
+
 var lv = {}, err = [], have = [false, false, false, false], id_reg = /[a-z0-9_\.\-]/i;
 
 function init()
@@ -17,7 +19,7 @@ function main()
     }
     catch (error) 
     {
-        alert("JSON 的语法都能弄错，踢！");
+        alert("JSON 的语法都能弄错，踢！\n请铲车至 JSON.cn 检查完语法再来校验。");
         return;
     }
     if (lv.schema_version === 2)
