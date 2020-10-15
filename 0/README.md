@@ -2,14 +2,13 @@
 
 ## 在线应用
 
-- [Cytoid level.json 校验](/0/ctdcheck/)
+- [Cytoid level.json 校验](//billzhou233.github.io/0/ctdcheck/)
 
 ## 友链
 
-- [Fujao-time](//fujao-time.qmqaq.top/)
 - [CatNetwork](//qmqaq.top/)
 
-## 关于我
+## 问候（x）
 
 - GitHub: See Footer(
 - Email: route_1#qq.com

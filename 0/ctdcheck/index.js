@@ -1,28 +1,30 @@
 // encoding: utf-8
 // 大括号不换行的跟换行的打，变量名首字母大写的跟不大写的打，私有域前面加下划线的跟不加下划线的打
 
-console.log("This is Cytoid Checker Ver200520A\nMade By BillZhou233");
+console.log("This is Cytoid Level Checker Ver201015\nMade By BillZhou233");
 
-var lv = {}, err = [], have = [false, false, false, false], id_reg = /[a-z0-9_\.\-]/i;
+var lv = {}, err = [], have = [false, false, false, false], ok = false, id_reg = /[a-z0-9_\.\-]/i;
 
 function init()
 {
-    lv = {}, err = [], have = [false, false, false, false];
+    console.log("init");
+    document.getElementById("inptitle").innerText = "* 展开输入框";
+    ok = false;
 }
 
 function main()
 {
-    init();
-    try 
+    lv = {}, err = [], have = [false, false, false, false];
+    try
     {
         lv = JSON.parse(document.getElementById("inp").value);
     }
     catch (error) 
     {
-        alert("JSON 的语法都能弄错，踢！\n请铲车至 JSON.cn 检查完语法再来校验。");
+        swal("踢！", "JSON 的语法都能弄错！！1111\n请铲车至 JSON.cn 检查完语法再来校验。", "error", {buttons: "jao"});
         return;
     }
-    if (lv.schema_version === 2)
+    if ((lv.schema_version === 1) || (lv.schema_version === 2))
     {
         if (id_reg.test(lv.id) && typeof(lv.id) == "string") document.getElementById("cid").value = lv.id;
         else
@@ -34,7 +36,7 @@ function main()
         else
         {
             document.getElementById("version").value = "[x] 错误";
-            err.push("</br>[x] version 读取到一个字符串，但期望读取一个数字。");
+            err.push("</br>[x] version 读取的值不是数字");
         }
         if (typeof(lv.title) == "string") document.getElementById("title").value = lv.title;
         else
@@ -63,7 +65,7 @@ function main()
             err.push("</br>[x] artist_localized 读取到一个非字符串类型，但期望读取一个字符串。");
         }
         if (typeof(lv.artist_source) == "undefined") document.getElementById("artist_source").value = "[未填写，不显示]";
-        else if (typeof(lv.artist_source) == "string") document.getElementById("artist_source").value = lv.artist;
+        else if (typeof(lv.artist_source) == "string") document.getElementById("artist_source").value = lv.artist_source;
         else
         {
             document.getElementById("artist_source").value = "[x] 错误";
@@ -83,7 +85,7 @@ function main()
             err.push("</br>[x] illustrator_localized 读取到一个非字符串类型，但期望读取一个字符串。");
         }
         if (typeof(lv.illustrator_source) == "undefined") document.getElementById("illustrator_source").value = "[未填写，不显示]";
-        else if (typeof(lv.illustrator_source) == "string") document.getElementById("illustrator_source").value = lv.illustrator;
+        else if (typeof(lv.illustrator_source) == "string") document.getElementById("illustrator_source").value = lv.illustrator_source;
         else
         {
             document.getElementById("illustrator_source").value = "[x] 错误";
@@ -113,7 +115,7 @@ function main()
             document.getElementById("background").value = "[x] 错误";
             err.push("</br>[x] background.path 读取到一个非字符串类型，但期望读取一个字符串。");
         }
-        if (typeof(lv.background) == "object" && lv.charts.length)
+        if (typeof(lv.charts) == "object" && lv.charts.length)
         {
             for (i = 0; i < lv.charts.length; ++i)
             {
@@ -130,11 +132,14 @@ function main()
                     else
                     {
                         have[diff] = 1;
-                        if (typeof(lv.charts[i].difficulty) == "number") document.getElementById(prefix + "diff").value = lv.charts[i].difficulty;
+                        if (typeof(lv.charts[i].difficulty) == "number") 
+                        {
+                            document.getElementById(prefix + "diff").value = (lv.charts[i].difficulty <= 0) ? "?" : ((lv.charts[i].difficulty >= 16) ? "15+" : lv.charts[i].difficulty);
+                        }
                         else
                         {
                             document.getElementById(prefix + "diff").value = "[x] 错误";
-                            err.push("</br>[x] " + lv.charts[i].type + " 难度的 difficulty 读取到一个字符串，但期望读取一个数字。");
+                            err.push("</br>[x] " + lv.charts[i].type + " 难度的 difficulty 读取的值不是数字。");
                         }
                         if (typeof(lv.charts[i].name) == "undefined") document.getElementById(prefix + "name").value = "[未填写，显示预设]";
                         else if (typeof(lv.charts[i].name) == "string") document.getElementById(prefix + "name").value = lv.charts[i].name;
@@ -170,8 +175,51 @@ function main()
         }
         else err.push("</br>[x] 未设置谱面列表。");
     }
-    else err.push("</br>[x] schema_version 不为 2。");
-    var serr = "计数: " + err.length;
+    else err.push("</br>[x] schema_version 需要填写 1 或 2。");
+    if (!err.length) { ok = true; document.getElementById("inptitle").innerText = "展开输入框"; }
+    var serr = "错误计数: " + err.length;
+    if (lv.schema_version === 1) err.push("</br>[!] 警告：schema_version 填写了 1，这意味着谱面使用 C1 格式，且游戏中显示的难度会经过一层转换，与读取结果不同。");
     for (i = 0; i < err.length; ++i) serr += err[i];
     document.getElementById("err").innerHTML = serr;
+}
+
+async function idcheck()
+{
+    if (ok)
+    {
+        var req = new XMLHttpRequest();
+        req.open("GET", "https://api.cytoid.cn/levels/" + lv.id, true);
+        req.onreadystatechange = function()
+        {
+            if (req.readyState == 4)
+            {
+                if (req.status == 404) swal("行力", "此 ID 未被占用。", "success", {buttons: "jao"});
+                else swal("不行", "此 ID 已被占用。", "info", {buttons: "jao"});
+            }
+        }
+        req.send();
+    }
+    else swal("好像忘了些什么...", "请先检查格式至无错误再执行此操作。", "warning", {buttons: "jao"});
+}
+
+function compress()
+{
+    if (ok)
+    {
+        swal({
+            title: "注意！",
+            text: "压缩后会覆盖输入框中内容，铲车？",
+            icon: "info",
+            buttons: ["贵阳", "铲车"],
+            dangerMode: true,
+        }).then((willdo) =>
+        {
+            if (willdo) 
+            {
+                var s = JSON.stringify(lv);
+                document.getElementById("inp").value = s;
+            }
+        });
+    }
+    else swal("好像忘了些什么...", "请先检查格式至无错误再执行此操作。", "warning", {buttons: "jao"});
 }
