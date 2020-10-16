@@ -8,11 +8,11 @@
 
 ## 0x01 前置知识
 
-大部分开发者使用 GitHub 来存放自己的项目，并采用 GitHub Pages 来部署项目文档。这种情况下只需要一个顺手的编辑器和能访问 GitHub 的 Git/SVN 客户端便可以基于 GitHub Pages 来部署 Docsify，而无需在自己的设备上安装 nodejs、python 或其他环境。
+大部分开发者使用 GitHub 来存放自己的项目，并采用 GitHub Pages 来部署项目文档。这种情况下只需要一个顺手的编辑器和能访问 GitHub 的 Git/SVN 客户端便可以基于 GitHub Pages 来部署 Docsify，而无需在自己的设备上利用 NPM / PIP 等安装其他环境。
 
-在 GitHub Pages 中部署项目文档时，可将 Docsify 核心文件以及文档对应的 Markdown 文件新开一个仓库专门存放。或者，也可以将文件放置在项目根目录下 `/docs/` 子文件夹，再在项目 Settings 里面选择 Source 项为 `master branch /docs folder` 即可。无论您选用何种方式，部署后默认的访问地址均为 `https://<username>.github.io/<repo>/`。
+在 GitHub Pages 中部署项目文档时，可将 Docsify 核心文件以及文档对应的 Markdown 文件新开一个仓库专门存放。或者，也可以将文件放置在项目根目录下的某个子文件夹，再在项目 Settings 里面指派 Source 项即可。无论您选用何种方式，部署后默认的访问地址均为 `https://<username>.github.io/<repo>/`。
 
-除了 GitHub Pages 之外，它也支持在任意的静态网站服务器软件上部署，例如文章中本地测试使用的就是 nginx。
+除了 GitHub Pages 之外，它也支持在任意的静态网站服务器软件上部署，例如笔者本地测试使用的是 nginx。
 
 ## 0x02 快速开始
 
@@ -66,9 +66,9 @@ loadSidebar: true,
 Docsify 默认的代码高亮仅支持 HTML、JS、CSS，我们需要引入 PrismJS 的语言模块来让其支持对应的语言。例如，对于 C++，请在 `</body>` 前加上如下的代码。
 
 ```html
-<script src="https://unpkg.com/browse/prismjs@1/components/prism-clike.min.js"></script>
-<script src="https://unpkg.com/browse/prismjs@1/components/prism-c.min.js"></script>
-<script src="https://unpkg.com/browse/prismjs@1/components/prism-cpp.min.js"></script>
+<script src="https://unpkg.com/prismjs@1/components/prism-clike.min.js"></script>
+<script src="https://unpkg.com/prismjs@1/components/prism-c.min.js"></script>
+<script src="https://unpkg.com/prismjs@1/components/prism-cpp.min.js"></script>
 ```
 
 其他语言请自行去 [UNPKG](https://unpkg.com/browse/prismjs@1/components/) 里面找。
@@ -102,6 +102,14 @@ notFoundPage: '404.md',  //报错页面
 ## 0x03 进阶操作
 
 Docsify 有着强大的拓展性，通过增强功能和拓展组件，我们可以进行很多进阶操作，大部分拓展同样可通过 UNPKG 等 CDN 分发。官方文档中有完备的增强功能介绍和拓展列表，这里先介绍常用的几个。
+
+### 使用 jsDelivr 的访问加速
+
+若您的文档部署在 GitHub，可以通过 jsDelivr 提供的镜像进行访问加速，只需在配置区域添加如下内容并修改为自己的仓库路径。
+
+```js
+basePath: "https://cdn.jsdelivr.net/gh/<username>/<repo>@<branch>/<optional-path>",
+```
 
 ### 一键复制代码
 
