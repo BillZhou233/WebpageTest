@@ -209,9 +209,9 @@ function compress()
     {
         swal({
             title: "注意！",
-            text: "压缩后会覆盖输入框中内容，阿格王朔？",
+            text: "压缩后会覆盖输入框中内容，铲车？",
             icon: "info",
-            buttons: ["贵阳一下", "阿格王朔"],
+            buttons: ["贵阳", "铲车"],
             dangerMode: true,
         }).then((willdo) =>
         {
