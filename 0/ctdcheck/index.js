@@ -1,7 +1,7 @@
 // encoding: utf-8
 // 大括号不换行的跟换行的打，变量名首字母大写的跟不大写的打，私有域前面加下划线的跟不加下划线的打
 
-console.log("This is Cytoid Level Checker Ver201015\nMade By BillZhou233");
+console.log("This is Cytoid Level Checker Ver201016\nMade By BillZhou233");
 
 var lv = {}, err = [], have = [false, false, false, false], ok = false, id_reg = /[a-z0-9_\.\-]/i;
 
@@ -176,7 +176,8 @@ function main()
         else err.push("</br>[x] 未设置谱面列表。");
     }
     else err.push("</br>[x] schema_version 需要填写 1 或 2。");
-    if (!err.length) { ok = true; document.getElementById("inptitle").innerText = "展开输入框"; }
+    if (!err.length) { ok = true; document.getElementById("inptitle").innerText = "展开输入框"; toastr.success('啊wee改哈鞥嫦娥我刚不疤痕处哈维楚王嗡阿格王朔！！1111');}
+    else toastr.warning('则不呢就美丽了');
     var serr = "错误计数: " + err.length;
     if (lv.schema_version === 1) err.push("</br>[!] 警告：schema_version 填写了 1，这意味着谱面使用 C1 格式，且游戏中显示的难度会经过一层转换，与读取结果不同。");
     for (i = 0; i < err.length; ++i) serr += err[i];
@@ -193,8 +194,8 @@ async function idcheck()
         {
             if (req.readyState == 4)
             {
-                if (req.status == 404) swal("行力", "此 ID 未被占用。", "success", {buttons: "jao"});
-                else swal("不行", "此 ID 已被占用。", "info", {buttons: "jao"});
+                if (req.status == 404) toastr.success('这他妈牛逼力111');
+                else toastr.warning('我草我这个键盘的1是不是坏了');
             }
         }
         req.send();
@@ -208,9 +209,9 @@ function compress()
     {
         swal({
             title: "注意！",
-            text: "压缩后会覆盖输入框中内容，铲车？",
+            text: "压缩后会覆盖输入框中内容，阿格王朔？",
             icon: "info",
-            buttons: ["贵阳", "铲车"],
+            buttons: ["贵阳一下", "阿格王朔"],
             dangerMode: true,
         }).then((willdo) =>
         {
@@ -218,6 +219,7 @@ function compress()
             {
                 var s = JSON.stringify(lv);
                 document.getElementById("inp").value = s;
+                toastr.success('成功上市');
             }
         });
     }

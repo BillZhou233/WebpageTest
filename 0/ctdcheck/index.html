@@ -8,10 +8,12 @@
         <meta http-equiv="X-UA-Compatible" content="IE=11">
         <title>Cytoid Level Checker</title>
         <link rel="stylesheet" href="https://unpkg.com/bootstrap@4.4.1/dist/css/bootstrap.min.css" crossorigin="anonymous">
-        <script src="https://unpkg.com/jquery@3.4.1/dist/jquery.min.js"></script><style type="text/css" abt="234"></style>
+        <link rel="stylesheet" href="https://unpkg.com/toastr@2.1.4/build/toastr.min.css" crossorigin="anonymous">
+        <script src="https://unpkg.com/jquery@3.4.1/dist/jquery.min.js"></script>
         <script src="https://unpkg.com/popper.js@1.16.1/dist/umd/popper.min.js"></script>
         <script src="https://unpkg.com/bootstrap@4.4.1/dist/js/bootstrap.min.js"></script>
         <script src="https://unpkg.com/sweetalert@2.1.0/dist/sweetalert.min.js"></script>
+        <script src="https://unpkg.com/toastr@2.1.4/build/toastr.min.js"></script>
     </head>
 
     <body>
@@ -273,6 +275,13 @@
 
     <script type="text/javascript">
         $(document).ready(function(){$('[data-toggle="popover"]').popover();});
+        toastr.options.newestOnTop = false;
+        toastr.options.positionClass = "toast-top-left";
+        toastr.options.showMethod = 'show';
+        toastr.options.hideMethod = 'hide';
+        toastr.options.timeOut = 1800; // How long the toast will display without user interaction
+        toastr.options.extendedTimeOut = 2500; // How long the toast will display after a user hovers over it
+        toastr.options.progressBar = true;
     </script>
 
 </html>
