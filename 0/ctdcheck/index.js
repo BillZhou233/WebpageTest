@@ -1,7 +1,7 @@
 // encoding: utf-8
 // 大括号不换行的跟换行的打，变量名首字母大写的跟不大写的打，私有域前面加下划线的跟不加下划线的打
 
-console.log("This is Cytoid Level Checker Ver201016\nMade By BillZhou233");
+console.log("This is Cytoid Level Checker Ver201022\nMade by BillZhou233");
 
 var lv = {}, err = [], have = [false, false, false, false], ok = false, id_reg = /[a-z0-9_\.\-]/i;
 
@@ -58,7 +58,7 @@ function main()
             err.push("</br>[x] artist 读取到一个非字符串类型，但期望读取一个字符串。");
         }
         if (typeof(lv.artist_localized) == "undefined") document.getElementById("artist_localized").value = "[未填写，不显示]";
-        else if (typeof(lv.artist_localized) == "string") document.getElementById("artist_localized").value = lv.artist;
+        else if (typeof(lv.artist_localized) == "string") document.getElementById("artist_localized").value = lv.artist_localized;
         else
         {
             document.getElementById("artist_localized").value = "[x] 错误";
@@ -78,7 +78,7 @@ function main()
             err.push("</br>[x] illustrator 读取到一个非字符串类型，但期望读取一个字符串。");
         }
         if (typeof(lv.illustrator_localized) == "undefined") document.getElementById("illustrator_localized").value = "[未填写，不显示]";
-        else if (typeof(lv.illustrator_localized) == "string") document.getElementById("illustrator_localized").value = lv.illustrator;
+        else if (typeof(lv.illustrator_localized) == "string") document.getElementById("illustrator_localized").value = lv.illustrator_localized;
         else
         {
             document.getElementById("illustrator_localized").value = "[x] 错误";
@@ -184,7 +184,7 @@ function main()
     document.getElementById("err").innerHTML = serr;
 }
 
-async function idcheck()
+function idcheck()
 {
     if (ok)
     {
@@ -200,7 +200,7 @@ async function idcheck()
         }
         req.send();
     }
-    else swal("好像忘了些什么...", "请先检查格式至无错误再执行此操作。", "warning", {buttons: "jao"});
+    else swal("这个杯子是拿来喝水的吗", "请先检查格式至无错误再执行此操作。", "warning", {buttons: "jao"});
 }
 
 function compress()
@@ -223,5 +223,5 @@ function compress()
             }
         });
     }
-    else swal("好像忘了些什么...", "请先检查格式至无错误再执行此操作。", "warning", {buttons: "jao"});
+    else swal("这个杯子是拿来喝水的吗", "请先检查格式至无错误再执行此操作。", "warning", {buttons: "jao"});
 }
