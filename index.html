@@ -8,7 +8,7 @@
     <meta name="viewport" content="width=device-width,initial-scale=1">
     <meta charset="UTF-8">
     <meta name="description" content="Nyaa~">
-    <title>冰糖酱の家</title>
+    <title>Crystal Sugar World</title>
     <link rel="stylesheet" href="https://unpkg.com/docsify@4.11.3/themes/vue.css">
 </head>
 
@@ -24,7 +24,7 @@
             auto2top: true,
             noEmoji: true,
             subMaxLevel: 2,
-            name: '冰糖酱の家',
+            name: 'Crystal Sugar World',
             homepage: '_index.md',
             notFoundPage: '_err.md',
             formatUpdated: '{MM}/{DD} {HH}:{mm}',
@@ -40,15 +40,15 @@
                 {
                     hook.afterEach(function(html)
                     {
-                        var path = 'https://billzhou233.github.io/' + vm.route.file;
+                        var path = '/' + vm.route.file;
                         var footer =
                         [
                             '<hr/>',
                             '<footer>',
-                            '<span>Download Raw File <a href="',
+                            '<span><a href="',
                             path,
-                            '" target="_blank">Here</a>.</span></br>',
-                            '<span>&copy; 2018 ~ 2020 <a href="https://github.com/BillZhou233" target="_blank">BillZhou233</a>.</span></br>',
+                            '" target="_blank">Raw</a>.</span></br>',
+                            '<span>(C) 2018 ~ 2020 <a href="https://github.com/BillZhou233" target="_blank">BillZhou233</a>.</span></br>',
                             '<span>Generated with <a href="https://github.com/docsifyjs/docsify" target="_blank">Docsify ',
                             window.Docsify.version,
                             '</a> .</span>',

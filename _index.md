@@ -1,6 +1,11 @@
 <!-- _index.md -->
 
-# CSP-S 2020 RP++
+# Crystal Sugar World
 
-> 过了初赛，准备打复赛了！！1111  
-> 2020.10.16
+我很可爱，给我[打钱](https://afdian.net/@BillZhou233)！
+
+## Links
+
+- [GitHub](//github.com/BillZhou233)
+- [Luogu](//www.luogu.com.cn/user/127140)
+- [Bilibili](//space.bilibili.com/25333286)
