@@ -1,4 +1,5 @@
 <!-- _sidebar.md -->
 
-- [首页](/)
-- 什么都没有
+- [Main Page](/)
+- [Information](/0/)
+- 绝赞贵阳中

@@ -1,17 +1,9 @@
-<!-- /0/_index.md -->
+# Information
 
-## 在线应用
+我很可爱，给我[打钱](https://afdian.net/@BillZhou233)！
 
-- [Cytoid level.json 校验](//billzhou233.github.io/0/ctdcheck/)
+## Links
 
-## 友链
-
-- [CatNetwork](//qmqaq.top/)
-
-## 问候（x）
-
-- GitHub: See Footer(
-- Email: route_1#qq.com
-- Luogu: [This](//www.luogu.org/space/show?uid=127140)
-- Bilibili: [This](//space.bilibili.com/25333286)
-- Cytoid & osu! & Malody: BillZhou233
+- [GitHub](//github.com/BillZhou233)
+- [Luogu](//www.luogu.com.cn/user/127140)
+- [Bilibili](//space.bilibili.com/25333286)
