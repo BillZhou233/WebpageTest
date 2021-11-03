@@ -2,4 +2,5 @@
 
 - [Main Page](/)
 - [Information](/0/)
-- 绝赞贵阳中
+- [Charts](/2/)
+- 更多内容绝赞贵阳中...
