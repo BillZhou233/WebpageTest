@@ -4,63 +4,63 @@
 
 <html>
 <head>
-	<meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
-	<meta name="viewport" content="width=device-width,initial-scale=1">
-	<meta charset="UTF-8">
-	<meta name="description" content="Nyaa~">
-	<title>Crystal Sugar World</title>
-	<link rel="stylesheet" href="https://unpkg.com/docsify@4.11.3/themes/vue.css">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+  <meta name="viewport" content="width=device-width,initial-scale=1">
+  <meta charset="UTF-8">
+  <meta name="description" content="Nyaa~">
+  <title>Crystal Sugar World</title>
+  <link rel="stylesheet" href="https://unpkg.com/docsify@4.11.3/themes/vue.css">
 </head>
 
 <body>
-	<div data-app id="main">少女贵阳中...</div>
-	<script type="text/javascript">
-		window.$docsify =
-		{
-			el: '#main',
-			themeColor: '#1FA0FF',
-			executeScript: false,
-			loadSidebar: true,
-			auto2top: true,
-			noEmoji: true,
-			subMaxLevel: 2,
-			name: 'Crystal Sugar World',
-			homepage: '_index.md',
-			notFoundPage: '_err.md',
-			formatUpdated: '{MM}/{DD} {HH}:{mm}',
-			copyCode:
-			{
-				buttonText : 'Copy',
-				errorText  : 'Sorry, try again！',
-				successText: 'OK!',
-			},
-			plugins:
-			[
-				function(hook, vm)
-				{
-					hook.afterEach(function(html)
-					{
-						var path = '/' + vm.route.file;
-						var footer =
-						[
-							'<hr/>',
-							'<footer>',
-							'<span>(C) 2018 ~ 2021 <a href="https://github.com/BillZhou233" target="_blank">BillZhou233</a> | <a href="',
-							path,
-							'" target="_blank">Raw</a></span></br>',
-							'<span>Generated with <a href="https://github.com/docsifyjs/docsify" target="_blank">Docsify ',
-							window.Docsify.version,
-							'</a></span>',
-							'</footer>'
-						].join('');
-						return html + footer;
-					});
-				}
-			],
-		}
-	</script>
-	<script src="https://unpkg.com/docsify@4.11.3/lib/docsify.min.js"></script>
-	<script src="https://unpkg.com/docsify-copy-code@2.1.0/dist/docsify-copy-code.min.js"></script>
-	<script src="./highlight-ext.min.js"></script>
+  <div data-app id="main">当代互联网小天使 降临于此...</div>
+  <script type="text/javascript">
+    window.$docsify =
+    {
+      el: '#main',
+      themeColor: '#1FA0FF',
+      executeScript: false,
+      loadSidebar: true,
+      auto2top: true,
+      noEmoji: true,
+      subMaxLevel: 2,
+      name: 'Crystal Sugar World',
+      homepage: '_index.md',
+      notFoundPage: '_err.md',
+      formatUpdated: '{MM}/{DD} {HH}:{mm}',
+      copyCode:
+      {
+        buttonText : 'Copy',
+        errorText  : 'Sorry, try again！',
+        successText: 'OK!',
+      },
+      plugins:
+      [
+        function(hook, vm)
+        {
+          hook.afterEach(function(html)
+          {
+            var path = '/' + vm.route.file;
+            var footer =
+            [
+              '<hr/>',
+              '<footer>',
+              '<span>(C) 2018 ~ 2022 <a href="https://github.com/BillZhou233" target="_blank">BillZhou233</a> | <a href="',
+              path,
+              '" target="_blank">Raw</a></span></br>',
+              '<span>Generated with <a href="https://github.com/docsifyjs/docsify" target="_blank">Docsify ',
+              window.Docsify.version,
+              '</a></span>',
+              '</footer>'
+            ].join('');
+            return html + footer;
+          });
+        }
+      ],
+    }
+  </script>
+  <script src="https://unpkg.com/docsify@4.11.3/lib/docsify.min.js"></script>
+  <script src="https://unpkg.com/docsify-copy-code@2.1.0/dist/docsify-copy-code.min.js"></script>
+  <script src="./highlight-ext.min.js"></script>
 </body>
 </html>
