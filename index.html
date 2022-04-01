@@ -9,7 +9,7 @@
   <meta charset="UTF-8">
   <meta name="description" content="Nyaa~">
   <title>Crystal Sugar World</title>
-  <link rel="stylesheet" href="https://unpkg.com/docsify@4.11.3/themes/vue.css">
+  <link rel="stylesheet" href="./files/css/main.css">
 </head>
 
 <body>
@@ -19,6 +19,7 @@
     {
       el: '#main',
       themeColor: '#1FA0FF',
+      relativePath: true,
       executeScript: false,
       loadSidebar: true,
       auto2top: true,
@@ -59,8 +60,17 @@
       ],
     }
   </script>
+
+  <!-- for local test-->
+  <!--
+  <script src="./files/js/docsify.js"></script>
+  <script src="./files/js/docsify-copy-code.js"></script>
+  -->
+
+  <!-- for deploy-->
   <script src="https://unpkg.com/docsify@4.11.3/lib/docsify.min.js"></script>
   <script src="https://unpkg.com/docsify-copy-code@2.1.0/dist/docsify-copy-code.min.js"></script>
-  <script src="./highlight-ext.min.js"></script>
+
+  <script src="./files/js/highlight-ext.min.js"></script>
 </body>
 </html>
