@@ -1,10 +1,9 @@
 <!-- _index.md -->
 
-# Crystal Sugar World
+# Crystal Sugar World -Reborn-
 
 小天使请安！
 
----
+这里是最最单纯可爱善良的当代互联网小天使冰糖酱。
 
-> 我是从天而降的光  
-> 照亮混沌的 21 世纪互联网 
+祝你早安、午安、晚安。

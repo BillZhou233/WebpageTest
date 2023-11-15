@@ -1,33 +1,71 @@
 <!-- index.html -->
 
 <!doctype html>
+
 <html>
 <head>
-<title>Crystal Sugar World</title>
-<meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
-<meta name="viewport" content="width=device-width,initial-scale=1">
-<meta charset="UTF-8">
-<meta name="description" content="小天使请安~">
-<style>
-  body {
-    width: 35em;
-    margin: 0 auto;
-    font-family: sans-serif;
-  }
-  @media screen and (max-width: 640px) {
-    body {
-      width: 90%;
-    }
-  }
-</style>
+  <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+  <meta name="viewport" content="width=device-width,initial-scale=1">
+  <meta charset="UTF-8">
+  <meta name="description" content="Nyaa~">
+  <title>Crystal Sugar World</title>
+  <link rel="stylesheet" href="./files/css/new.css">
 </head>
+
 <body>
-<h2>Crystal Sugar World</h2>
-<p>
-不知为何，一个稚嫩的女声突然在你脑海中响起：
-</br>
-下面的区域，以后再来探索吧！
-</p>
-<p>(C) 2016~2023 angelkw1 a.k.a. BillZhou233</p>
+  <div data-app id="main">当代互联网小天使 降临于此...</div>
+  <script type="text/javascript">
+    window.$docsify =
+    {
+      el: '#main',
+      relativePath: true,
+      executeScript: false,
+      loadSidebar: true,
+      auto2top: true,
+      noEmoji: true,
+      subMaxLevel: 2,
+      name: 'Crystal Sugar World',
+      homepage: '_index.md',
+      notFoundPage: '_err.md',
+      formatUpdated: '{MM}/{DD} {HH}:{mm}',
+      copyCode:
+      {
+        buttonText : 'Copy',
+        errorText  : 'Sorry, try again！',
+        successText: 'OK!',
+      },
+      themeable: {
+          readyTransition : false,
+          responsiveTables: true
+      },
+      plugins:
+      [
+        function(hook, vm)
+        {
+          hook.afterEach(function(html)
+          {
+            var path = '/' + vm.route.file;
+            var footer =
+            [
+              '<hr/>',
+              '<footer>',
+              '<span>(C) 2016 ~ 2023 <a href="https://github.com/BillZhou233" target="_blank">BillZhou233</a> | <a href="',
+              path,
+              '" target="_blank">Raw</a></span></br>',
+              '<span>Generated with <a href="https://github.com/docsifyjs/docsify" target="_blank">Docsify ',
+              window.Docsify.version,
+              '</a></span>',
+              '</footer>'
+            ].join('');
+            return html + footer;
+          });
+        }
+      ],
+    }
+  </script>
+
+  <script src="./files/js/docsify.js"></script>
+  <script src="./files/js/docsify-copy-code.js"></script>
+  <script src="./files/js/highlight-ext.min.js"></script>
 </body>
 </html>

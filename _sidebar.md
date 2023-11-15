@@ -1,6 +1,5 @@
 <!-- _sidebar.md -->
 
 - [Main Page](/)
-- [Information](/0/)
-- [Charts](/2/)
-- [Texts](/3/)
+- [Zero](/0/)
+- [One](/1/)
